@@ -43,3 +43,21 @@
       Returns true of idNum satisfies the Luhn Algorithm
 
 */
+window.addEventListener("load", function () {
+      // Retrieve the field/value pairs from the URL 
+      var formData = location.search.slice(1);
+      formData = formData.replace(/\+/g, " ");
+      formData = decodeURIComponent(formData);
+      var formFields = formData.split(/[&=]/g);
+
+      // Write the field values to the order form
+      document.forms.order.elements.orderDate.value = formFields[1];
+      document.forms.order.elements.orderDate.value = formFields[5];
+      document.forms.order.elements.orderDate.value = formFields[7];
+      document.forms.order.elements.orderDate.value = formFields[9];
+      document.forms.order.elements.orderDate.value = formFields[13];
+      document.forms.order.elements.orderDate.value = formFields[15];
+      document.forms.order.elements.orderDate.value = formFields[17];
+      document.forms.order.elements.orderDate.value = formFields[19];
+      document.forms.order.elements.orderDate.value = formFields[21];
+});
